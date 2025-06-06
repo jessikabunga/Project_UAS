@@ -1,8 +1,8 @@
 Anggota Kelompok:
-- Jessika Bunga Amalia    235150701111005
-- Zahra Aura Nabila		    235150701111004
-- Antike Rahma Safira		  235150707111009
-- Besty Cintara			      235150707111036
+- Jessika Bunga Amalia    (235150701111005)
+- Zahra Aura Nabila		    (235150701111004)
+- Antike Rahma Safira		  (235150707111009)
+- Besty Cintara			      (235150707111036)
 
 
 Perbaikan API eksternal pada sistem Pemesanan Tiket Bisokop
@@ -12,15 +12,16 @@ Perbaikan API eksternal pada sistem Pemesanan Tiket Bisokop
     - Sulit memperbarui data secara otomatis.
     - Tidak mencerminkan kondisi film yang sedang tayang saat ini.
 
-  Perbaikan yang dilakukan:
-  Kami mengubah pendekatan menjadi otomatisasi pengambilan data film menggunakan API eksternal dari The Movie Database (TMDB) https://www.themoviedb.org/. Perubahan ini diimplementasikan melalui file MovieSeeder.php, yang kini memanfaatkan GuzzleHttp Client untuk:
-    - Mengambil daftar film populer dari endpoint movie/popular.
-    - Mengambil daftar genre dari endpoint genre/movie/list.
-    - Menyimpan data film ke database secara langsung dengan judul, genre, jadwal tayang, dan harga.
+	  Perbaikan yang dilakukan:
+	  Kami mengubah pendekatan menjadi otomatisasi pengambilan data film menggunakan API eksternal dari The Movie Database (TMDB) https://www.themoviedb.org/. Perubahan ini diimplementasikan melalui file MovieSeeder.php, yang kini memanfaatkan GuzzleHttp Client untuk:
+- Mengambil daftar film populer dari endpoint movie/popular.
+- Mengambil daftar genre dari endpoint genre/movie/list.
+- Menyimpan data film ke database secara langsung dengan judul, genre, jadwal tayang, dan harga.
+
   Dengan pendekatan ini, data film kini:
-    - Lebih aktual dan relevan.
-    - Dapat diperbarui secara berkala hanya dengan menjalankan seeder.
-    - Menyediakan beragam genre dan judul populer dari TMDB.
+- Lebih aktual dan relevan.
+- Dapat diperbarui secara berkala hanya dengan menjalankan seeder.
+- Menyediakan beragam genre dan judul populer dari TMDB.
 
 2. Perbaikan Sistem Autentikasi: Validasi Token JWT Saat Akses Data
   Sebelumnya pada versi awal sistem kami:
